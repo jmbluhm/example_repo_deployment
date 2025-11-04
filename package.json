@@ -1,0 +1,17 @@
+{
+  "name": "pump-it-up",
+  "version": "1.0.0",
+  "description": "A click speed game with thermometer visualization",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step required'",
+    "start": "vercel dev"
+  },
+  "keywords": ["click", "game", "thermometer"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+

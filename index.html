@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pump It Up!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pump It Up!</h1>
+        <p class="subtitle">Click as fast as you can to raise the thermometer!</p>
+        
+        <div class="game-area">
+            <div class="thermometer-container">
+                <div class="thermometer">
+                    <div class="thermometer-base"></div>
+                    <div class="thermometer-stem">
+                        <div class="thermometer-fill" id="thermometerFill"></div>
+                    </div>
+                    <div class="thermometer-bulb">
+                        <div class="mercury" id="mercury"></div>
+                    </div>
+                </div>
+                <div class="temperature-display">
+                    <span id="temperature">0</span>°C
+                </div>
+                <div class="speed-display">
+                    <span id="clicksPerSecond">0</span> clicks/sec
+                </div>
+            </div>
+            
+            <button class="pump-button" id="pumpButton">
+                Pump It Up!
+            </button>
+            
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">Total Clicks:</span>
+                    <span class="stat-value" id="totalClicks">0</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Peak Speed:</span>
+                    <span class="stat-value" id="peakSpeed">0</span> cps
+                </div>
+            </div>
+            
+            <button class="reset-button" id="resetButton">Reset</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+

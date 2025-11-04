@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #667eea;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.game-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.thermometer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.thermometer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+
+.thermometer-base {
+    width: 80px;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    margin-bottom: -5px;
+    z-index: 2;
+}
+
+.thermometer-stem {
+    width: 40px;
+    height: 250px;
+    background: #e0e0e0;
+    border: 3px solid #333;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.thermometer-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to top, #ff4444 0%, #ff6666 50%, #ff8888 100%);
+    transition: height 0.3s ease-out;
+    border-radius: 0 0 15px 15px;
+}
+
+.thermometer-bulb {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border: 3px solid #333;
+    border-radius: 50%;
+    position: relative;
+    margin-top: -10px;
+    z-index: 2;
+}
+
+.mercury {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(to top, #ff4444 0%, #ff6666 50%, #ff8888 100%);
+    border-radius: 50%;
+    transition: height 0.3s ease-out, width 0.3s ease-out;
+}
+
+.temperature-display {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-top: 10px;
+}
+
+.speed-display {
+    font-size: 1.5rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.pump-button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 20px 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.pump-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.pump-button:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+}
+
+.pump-button:focus {
+    outline: none;
+}
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.reset-button {
+    background: #f0f0f0;
+    color: #666;
+    border: 2px solid #ddd;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.reset-button:hover {
+    background: #e0e0e0;
+    border-color: #ccc;
+}
+
+.reset-button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .thermometer {
+        height: 250px;
+    }
+    
+    .thermometer-stem {
+        height: 200px;
+    }
+    
+    .pump-button {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+    }
+    
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
